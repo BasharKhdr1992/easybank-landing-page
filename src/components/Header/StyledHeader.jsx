@@ -3,15 +3,15 @@ import bgIntroDesktop from "../../images/bg-intro-desktop.svg";
 import bgIntroMobile from "../../images/bg-intro-mobile.svg";
 import mockups from "../../images/image-mockups.png";
 const StyledHeader = styled.div`
-  height: 600px;
+  height: 500px;
   display: flex;
-  padding-left: 4rem;
+  padding-left: 8rem;
   background-image: url(${bgIntroDesktop});
-  background-position: top -17rem left 35rem;
+  background-position: top -17rem left 40rem;
   background-repeat: no-repeat;
   display: flex;
   .hero {
-    width: 60%;
+    width: 50%;
     position: relative;
   }
 
@@ -23,12 +23,13 @@ const StyledHeader = styled.div`
       right: 0;
       left: 0;
       width: 100%;
-      height: 150%;
+      height: 130%;
       z-index: 1;
       content: "";
       background-image: url(${mockups});
       background-repeat: no-repeat;
-      background-position: bottom 5rem right -8rem;
+      background-size: 100%;
+      background-position: bottom 0rem right -6rem;
     }
   }
 
@@ -36,7 +37,7 @@ const StyledHeader = styled.div`
     display: flex;
     height: inherit;
     flex-direction: column;
-    width: 40%;
+    width: 50%;
     justify-content: center;
   }
 
@@ -44,49 +45,47 @@ const StyledHeader = styled.div`
     color: hsl(233, 26%, 24%);
     margin-bottom: 2.5rem;
     font-weight: 400;
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 
   .content > p {
     margin-bottom: 2.5rem;
     font-size: 1.1rem;
+    width: 80%;
     color: hsl(233, 8%, 62%);
   }
-
   @media screen and (max-width: 1000px) {
     flex-direction: column-reverse;
     background-image: url(${bgIntroMobile});
-    background-position: top -3rem left 0rem;
     background-size: 100%;
+    background-position: top -3rem left 0rem;
     height: auto;
     padding: 0;
-    .hero {
-      height: 100vh;
+
+    .hero.dropdown-active {
+      &::after {
+        background-image: linear-gradient(
+          to bottom,
+          hsla(233, 8%, 62%, 1),
+          hsla(0, 0%, 98%, 0)
+        );
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 130%;
+        z-index: 1;
+        content: "";
+      }
     }
 
     .hero:not(.dropdown-active) {
       &::after {
-        background-size: 80%;
-        background-position: bottom 22rem right 5rem;
+        background-size: 97%;
+        background-position: bottom 15.2rem right 0.5rem;
       }
-    }
-
-    .hero.dropdown-active::after {
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-      content: "";
-      width: 100%;
-      height: 200%;
-      background-repeat: no-repeat;
-      background-image: linear-gradient(
-        to bottom,
-        hsla(233, 8%, 62%, 60%) 60%,
-        hsla(0, 0%, 100%, 40%)
-      );
     }
 
     .content,
@@ -95,7 +94,6 @@ const StyledHeader = styled.div`
     }
 
     .content {
-      margin-top: 12rem;
       align-items: center;
     }
 
@@ -111,22 +109,9 @@ const StyledHeader = styled.div`
     .content > p {
       line-height: 2rem;
     }
-  }
-
-  @media screen and (max-width: 600px) {
-    .hero:not(.dropdown-active) {
-      &::after {
-        background-size: 97%;
-        background-position: bottom 7rem right 0.5rem;
-      }
-    }
 
     .hero {
-      height: 50vh;
-    }
-
-    .content {
-      margin-top: 7rem;
+      height: 500px;
     }
   }
 `;

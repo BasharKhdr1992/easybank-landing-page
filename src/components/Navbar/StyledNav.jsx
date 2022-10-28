@@ -3,7 +3,7 @@ import styled from "styled-components";
 const StyledNav = styled.nav`
   display: flex;
   justify-content: space-between;
-  padding: 1rem 4rem 0rem 4rem;
+  padding: 1rem 8rem 0rem 8rem;
   align-items: center;
 
   .logo {

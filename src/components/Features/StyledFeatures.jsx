@@ -1,8 +1,9 @@
 import styled from "styled-components";
 
 const StyledFeatures = styled.section`
-  padding-left: 4rem;
+  padding-left: 8rem;
   padding-top: 7rem;
+  background-color: hsl(220, 16%, 96%);
   h2 {
     color: hsl(233, 26%, 24%);
     font-weight: 300;

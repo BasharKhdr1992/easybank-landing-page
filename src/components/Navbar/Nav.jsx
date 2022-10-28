@@ -8,17 +8,17 @@ import close from "../../images/icon-close.svg";
 const Nav = ({ isDropdown, onMobielMenuClick }) => {
   return (
     <StyledNav>
-      <section className="nav-logo">
+      <div className="nav-logo">
         <img src={logo} alt="easybank" className="logo" />
-      </section>
-      <section className="nav-links collapse">
+      </div>
+      <div className="nav-links collapse">
         <button className="nav-link">Home</button>
         <button className="nav-link">About</button>
         <button className="nav-link">Contact</button>
         <button className="nav-link">Blog</button>
         <button className="nav-link">Careers</button>
-      </section>
-      <section className="nav-right">
+      </div>
+      <div className="nav-right">
         <div className="collapse">
           <Button>request invite</Button>
         </div>
@@ -30,7 +30,7 @@ const Nav = ({ isDropdown, onMobielMenuClick }) => {
             className="mobile-menu"
           />
         </div>
-      </section>
+      </div>
       <div
         className={`${
           isDropdown ? "dropdown-active" : undefined

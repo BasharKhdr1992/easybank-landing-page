@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 const StyledArticles = styled.div`
-  padding-left: 4rem;
-  padding-top: 7rem;
+  padding: 7rem 8rem 0rem 8rem;
   margin-bottom: 7rem;
   h2 {
     font-weight: 300;
@@ -12,12 +11,13 @@ const StyledArticles = styled.div`
 
   .articles {
     display: flex;
+    justify-content: space-between;
   }
 
   .article {
     border-radius: 8px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    width: 21%;
+    width: 24%;
   }
 
   .article:not(:last-child) {
@@ -40,7 +40,7 @@ const StyledArticles = styled.div`
   .article > .author,
   .article > .title,
   .article > .desc {
-    margin-left: 2rem;
+    margin-left: 1rem;
   }
 
   .article > .title {
@@ -56,6 +56,7 @@ const StyledArticles = styled.div`
     color: hsl(233, 8%, 62%);
     margin-bottom: 1rem;
     margin-right: 1rem;
+    font-size: 0.9rem;
   }
 
   @media screen and (max-width: 1000px) {

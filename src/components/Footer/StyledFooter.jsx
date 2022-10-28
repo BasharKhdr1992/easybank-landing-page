@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
-  padding: 2rem 4rem;
+  padding: 2rem 8rem;
   background-color: hsl(233, 26%, 24%);
   display: flex;
   height: 7rem;
